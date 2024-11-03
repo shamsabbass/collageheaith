@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #eaeaea;
+    background-image: url('images/background.jpg'); /* خلفية الصفحة */
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: #3a7bd5; /* لون خلفية الرأس */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9); /* شفافية خلفية المحتوى */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.activity, .department {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.no-results {
+    color: red;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.login-form, .add-activity-form {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.department-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.department-tabs button {
+    flex: 1;
+    margin: 5px;
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.department-tabs button:hover {
+    background-color: #2b5bbd;
+}
+
+#departmentContent {
+    margin-top: 20px;
+}

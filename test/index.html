@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنشطة عمادة التقنيات الصحية والطبية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1 id="appTitle">أنشطة عمادة التقنيات الصحية والطبية</h1>
+    <button id="editTitleBtn">تعديل اسم التطبيق</button>
+</header>
+
+<div class="container">
+    <div id="login" class="login-form">
+        <h2>تسجيل دخول الأدمن</h2>
+        <input type="text" id="adminUsername" placeholder="اسم المستخدم">
+        <input type="password" id="adminPassword" placeholder="كلمة المرور">
+        <button onclick="login()">تسجيل الدخول</button>
+        <div id="loginError" style="color: red;"></div>
+    </div>
+
+    <div id="adminPanel" class="hidden">
+        <h2>إضافة نشاط جديد</h2>
+        <div class="add-activity-form">
+            <input type="text" id="activityTitle" placeholder="عنوان النشاط">
+            <input type="date" id="activityDate">
+            <input type="text" id="activityLocation" placeholder="مكان تنفيذ النشاط">
+            <select id="activityDepartment">
+                <option value="">اختر القسم</option>
+                <option value="قسم تقنيات المختبرات الطبية">قسم تقنيات المختبرات الطبية</option>
+                <option value="قسم تقنيات التخدير">قسم تقنيات التخدير</option>
+                <option value="قسم تقنيات البصريات">قسم تقنيات البصريات</option>
+                <option value="قسم تقنيات الأشعة">قسم تقنيات الأشعة</option>
+                <option value="قسم تقنيات صناعة الأسنان">قسم تقنيات صناعة الأسنان</option>
+                <option value="العمادة">العمادة</option>
+            </select>
+            <input type="url" id="activityLink" placeholder="الرابط الخاص بالنشاط">
+            <button onclick="addActivity()">إضافة النشاط</button>
+        </div>
+        <h2>البحث عن الأنشطة</h2>
+        <input type="text" id="searchInput" placeholder="بحث عن النشاط أو الرابط..." oninput="searchActivities()">
+        <input type="date" id="searchDate" placeholder="بحث عن تاريخ النشاط" onchange="searchActivities()">
+        <div id="activityList"></div>
+
+        <h2>أقسام العمادة</h2>
+        <div class="department-tabs">
+            <button onclick="showDepartment('medicalLab')">قسم تقنيات المختبرات الطبية</button>
+            <button onclick="showDepartment('anesthesia')">قسم تقنيات التخدير</button>
+            <button onclick="showDepartment('optics')">قسم تقنيات البصريات</button>
+            <button onclick="showDepartment('radiology')">قسم تقنيات الأشعة</button>
+            <button onclick="showDepartment('dental')">قسم تقنيات صناعة الأسنان</button>
+            <button onclick="showAllDepartments()">عرض جميع الأنشطة</button>
+        </div>
+
+        <div id="departmentContent"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
